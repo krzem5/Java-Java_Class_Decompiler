@@ -2,6 +2,7 @@ queries:
   - include: "*"
   - exclude: cpp/poorly-documented-function
   - exclude: cpp/short-global-name
+  - exclude: java/index-out-of-bounds
   - exclude: java/local-shadows-field
   - exclude: py/empty-except
   - exclude: py/redundant-global-declaration

@@ -56,7 +56,7 @@ public class Class{
 		if (this.sc!=null){
 			this.il.add(this.sc);
 		}
-		ll.add(String.format("%s%s class %s%s%s{",this._indent(i),(afs.length()==0?"":afs.substring(1)),this.nm,(this.sc.length()==0?"":" extends "+this._class_name(this.sc)),(ifs.length()==0?"":" implements "+ifs.substring(1))));
+		ll.add(String.format("%s%s class %s%s%s{",this._indent(i),(afs.length()==0?"":afs.substring(1)),this.nm,(this.sc!=null&&this.sc.length()==0?"":" extends "+this._class_name(this.sc)),(ifs.length()==0?"":" implements "+ifs.substring(1))));
 		for (Object[] f:this.fl){
 			afs="";
 			for (String af:(List<String>)((Object[])f)[2]){

@@ -1,4 +1,3 @@
-// https://docs.oracle.com/javase/specs/jvms/se8/html/
 package com.krzem.java_class_decompiler;
 
 
