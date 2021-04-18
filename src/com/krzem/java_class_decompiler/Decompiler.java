@@ -43,6 +43,7 @@ public class Decompiler{
 		}
 		int mnv=this.cr.readUShort();
 		int mjv=this.cr.readUShort();
+		System.out.println(String.format("%d: %d\n",mnv,mjv));
 		int sz=this.cr.readUShort();
 		Object[] cp=new Object[sz];
 		int[] cpt=new int[sz];
@@ -520,11 +521,11 @@ public class Decompiler{
 		if (is.length()!=0){
 			ll.add(0,String.format("%s\n\n\n",is.substring(1)));
 		}
-		if (pkg.length()!=0){
+		if (pkg!=null&&pkg.length()!=0){
 			ll.add(0,String.format("package %s;\n\n\n",pkg));
 		}
 		try{
-			BufferedWriter fw=new BufferedWriter(new FileWriter(((String)al.get("SourceFile")).replace(".","2.")/*(String)al.get("SourceFile")*/));
+			BufferedWriter fw=new BufferedWriter(new FileWriter(((String)al.get("SourceFile")).replace(".","2.")));
 			for (String l:ll){
 				fw.write(l+"\n");
 			}
